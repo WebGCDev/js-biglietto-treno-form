@@ -2,3 +2,18 @@ body {
   background-color: black;
   color: white;
 }
+
+label {
+  color: #b91547;
+}
+
+/* Colore che appare in caso di inserimento senza caratteri nel campo nome cognome */
+
+.errorMessage {
+  color: red;
+}
+
+/* Colore card con nome e cognome dell'intestatario biglietto */
+#traveler {
+  background-color: #757575;
+}

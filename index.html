@@ -31,13 +31,12 @@
     <title>Generatore Biglietti Treno</title>
   </head>
   <body>
-    <header></header>
-    <main>
-         <div class="container text-center">
+    <div class="container text-center">
       <h1 class="my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
       <div class="card">
         <div class="row mt-3 justify-content-center">
           <div class="col-3">
+            <!-- Chiedere a Gaetano come si fa ad avere solo lettere nel campo Nome e Cognome -->
             <label for="name" class="form-label">Nome e Cognome</label>
             <input
               type="text"
@@ -46,6 +45,10 @@
               placeholder="inserisci il tuo nome"
             />
             <!-- Inserire messaggio d'errore se non si inseriscono caratteri -->
+            <p class="errorMessage d-none">
+              Errore! Inserire almeno una lettera per procedere all'acquisto del
+              biglietto
+            </p>
           </div>
           <div class="col-3">
             <label for="km" class="form-label">Km da percorrere</label>
@@ -74,8 +77,37 @@
           </div>
         </div>
       </div>
-    </main>
-    <footer></footer>
+      <div class="generated-block d-none">
+        <h1>IL TUO BIGLIETTO</h1>
+        <div class="card text-start p-4">
+          <h5>DETTAGLIO PASSEGGERI</h5>
+          <div class="card">
+            <div class="row">
+              <div id="traveler" class="col-2">
+                <div class="my-3 fw-bolder">Nome passegero</div>
+                <div class="passenger mb-3 fw-bolder"></div>
+              </div>
+              <div class="col-2">
+                <div class="my-3 fw-bold">Offerta</div>
+                <div class="discount mb-3"></div>
+              </div>
+              <div class="col-2">
+                <div class="my-3 fw-bold">Carrozza</div>
+                <div class="wagon mb-3"></div>
+              </div>
+              <div class="col-2">
+                <div class="my-3 fw-bold">Codice CP</div>
+                <div class="cp mb-3"></div>
+              </div>
+              <div class="col-2">
+                <div class="my-3 fw-bold">Costo Biglietto</div>
+                <div class="costo mb-3">€</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Import JS -->
     <script src="js/script.js"></script>
     <!-- /Import JS -->
